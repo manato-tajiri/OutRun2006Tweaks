@@ -1,10 +1,12 @@
 on:
+  workflow_dispatch:
   push:
   pull_request:
 
 jobs:
   build:
-    runs-on: windows-2022
+    runs-on:
+  workflow_dispatch: windows-2022
     strategy:
       matrix:
         arch: [ Win32 ]
@@ -55,5 +57,3 @@ jobs:
         with:
           name: outrun2006tweaks-${{ github.sha }}
           path: build/bin/
- 
- 
