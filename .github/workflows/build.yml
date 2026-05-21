@@ -5,8 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on:
-  workflow_dispatch: windows-2022
+    runs-on: windows-2022
     strategy:
       matrix:
         arch: [ Win32 ]
